@@ -1,0 +1,10 @@
+://www.tutorialspoint.com/yaml/yaml_quick_guide.htm--
+- name: "Example Of html"
+  hosts: localhost
+  tasks:
+   - name: Install httpd 
+     yum: pkg=httpd 
+     become: true
+   - name: enable service
+     service: name=httpd enabled=yes
+     notify: restart httpd
