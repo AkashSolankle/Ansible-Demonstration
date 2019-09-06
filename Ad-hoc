@@ -1,0 +1,11 @@
+	**************************************************************************Ansible Ad-hoc Commands********************************************************************************
+	 ansible --version
+	 subscription-manager repos --enable rhel-7-server-ansible-3-rpms
+         ansible localhost -m ping -i inventory -vvvvvv
+	 subscription-manager attach --pool=8a85f99a6c6dc7aa016c878b7a5815aa
+	 ansible localhost -m lineinfile -a "regexp='^Ansible is Awesome' line='Ansible is SuperAwesome' path=./motd"
+	 ansible localhost -m lineinfile -a "line='Ansible is Awsome' path=./motd"
+
+
+
+
